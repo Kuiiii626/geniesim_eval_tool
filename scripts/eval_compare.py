@@ -34,13 +34,15 @@ def load_one_model(folder: str):
 
         try:
             df = pd.read_csv(csv_path)
+            if len(df) == 0:
+                continue
         except Exception as e:
             print(f"[WARN] 读取失败 {csv_path}, {e}")
             continue
 
-        if "success_rate" in df.columns:
+        if "success_rate" in df.columns and len(df) > 0:
             sr = float(df["success_rate"].iloc[0])
-        elif {"success", "total"}.issubset(df.columns):
+        elif {"success", "total"}.issubset(df.columns) and len(df) > 0:
             suc = float(df["success"].iloc[0])
             tot = float(df["total"].iloc[0])
             sr = suc / tot if tot > 0 else 0.0
