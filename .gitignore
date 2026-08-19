@@ -1,0 +1,31 @@
+# Python
+*.swp
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.Python
+
+# 输出目录
+eval_result/
+eval_auto_result/
+compare_output/
+put_your_json_here/
+sim_output/
+
+# 生成文件
+*.log
+*.csv
+!sample_output/**/*.csv
+
+# IDE
+.vscode/
+.idea/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 配置文件（可能含敏感信息）
+config/exp_*.json
+!config/exp_example.json

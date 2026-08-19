@@ -1,0 +1,13 @@
+{
+  "docker_id": "your_docker_container_id",
+  "model_name": "your_model_name",
+  "task_list": [
+    "g2op_manip_open_door",
+    "g2op_if_pick_billiards_color",
+    "g2op_spatial_stack_bowls"
+  ],
+  "infer_host": "your_infer_host:port",
+  "task_timeout_sec": 220,
+  "geniesim_output_base": "/path/to/geniesim/output",
+  "parse_output_dir": "/path/to/csv/output"
+}
